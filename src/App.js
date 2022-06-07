@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-// import { Faquery } from "react-icons/fa";
+import { Faquery } from "react-icons/fa";
 import Photo from "./Photo";
 const clientID = `?client_id=${process.env.REACT_APP_ACCESS_KEY}`;
 const mainUrl = `https://api.unsplash.com/photos/`;
@@ -75,21 +75,6 @@ function App() {
     return () => window.removeEventListener("scroll", event);
   }, []);
 
-  // useEffect(() => {
-  //   const event = window.addEventListener("scroll", () => {
-  //     if (
-  //       !loading &&
-  //       window.innerHeight + window.scrollY > document.body.scrollHeight - 2
-  //     ) {
-  //       console.log("hello");
-  //       setPage((oldPage) => {
-  //         return oldPage + 1;
-  //       });
-  //     }
-  //   });
-  //   return () => window.removeEventListener("scroll", event);
-  // }, []);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!query) return;
@@ -112,7 +97,7 @@ function App() {
             onChange={(e) => setQuery(e.target.value)}
           />
           <button type="submit" className="submit-btn" onClick={handleSubmit}>
-            {/* <Faquery /> */}
+            <Faquery />
           </button>
         </form>
       </section>
