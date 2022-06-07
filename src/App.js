@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import { Faquery } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import Photo from "./Photo";
 const clientID = `?client_id=${process.env.REACT_APP_ACCESS_KEY}`;
 const mainUrl = `https://api.unsplash.com/photos/`;
@@ -97,7 +97,7 @@ function App() {
             onChange={(e) => setQuery(e.target.value)}
           />
           <button type="submit" className="submit-btn" onClick={handleSubmit}>
-            <Faquery />
+            <FaSearch />
           </button>
         </form>
       </section>
